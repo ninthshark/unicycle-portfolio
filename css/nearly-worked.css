@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  overflow: hidden;
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  /* z-index: 1000; */
+  top: 0;
+  left: 0;
+  background: rgb(75, 75, 78);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 10%;
+  background: #4b4b4b;
+  min-height: 8vh;
+}
+
+.logo {
+  padding-right: 10rem;
+  z-index: 999;
+}
+
+nav a,
+li {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.nav-links {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  margin: auto;
+  /* min-height: 8vh; */
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid antiquewhite;
+}
+
+/* .active-link {
+  border-bottom: 2px red solid;
+} */
+
+/* .nav-links button {
+  padding: 9px 25px;
+  color: antiquewhite;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+} */
+
+.burger {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0.5rem;
+  right: 10%;
+  background-color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger div {
+  width: 80%;
+  height: 2px;
+  background-color: antiquewhite;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+main {
+  width: 100%;
+  height: 70vh;
+  background: burlywood;
+  background-image: url("./img/unicycle.jpg");
+  background-attachment: fixed;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.one {
+  background: chartreuse;
+}
+
+.two {
+  background: darkgoldenrod;
+}
+
+.three {
+  background: tomato;
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    overflow-y: hidden;
+  } */
+  .nav-links {
+    position: absolute;
+    left: 0px;
+    height: 50vh;
+    top: 7vh;
+
+    background-color: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(-100%);
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+.nav-active {
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
