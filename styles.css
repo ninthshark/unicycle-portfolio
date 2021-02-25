@@ -6,17 +6,23 @@
   box-sizing: border-box;
 }
 
+:root {
+  --maxWidth: 920px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: burlywood;
+  background-color: #4b4b4b;
+  color: white;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 html {
@@ -25,10 +31,13 @@ html {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .container {
   position: relative;
+  /* width: 100%;
+  max-width: 920px; */
   display: flex;
   flex-direction: column;
 }
@@ -103,13 +112,14 @@ li {
 
 main {
   width: 100%;
+
   height: 70vh;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   background: burlywood;
-  background-image: url("./img/unicycle.jpg");
+  background-image: url("./img/bg-blue-white.jpg");
   background-attachment: fixed;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -118,11 +128,12 @@ main {
 
 main .hello {
   color: white;
-  max-width: 60vw;
-  min-height: fit-content;
+  width: 60vw;
+  max-width: var(--maxWidth);
+  /* min-height: fit-content; */
   /* background-color: black;
   opacity: 0.8; */
-  background: linear-gradient(0deg, #00000088 33%, #ffffff2d 70%);
+  background: linear-gradient(0deg, #00000040 33%, #ffffff2d 90%);
   padding: 2rem;
   /* border-radius: 10px; */
 }
@@ -139,15 +150,15 @@ main a {
   font-weight: 500;
   color: white;
   padding: 1rem;
-  background: linear-gradient(0deg, #0000007e 33%, #413b0780 70%);
+  background: linear-gradient(0deg, #00000040 33%, #ffffff2d 90%);
   /* background: black; */
   /* border-radius: 5px; */
   /* background: #f7ce90;
   opacity: 0.8; */
   /* filter: sepia(50%); */
   margin-top: 1rem;
-  text-shadow: brown 2px 2px;
-  border: 1px solid tomato;
+  text-shadow: rgb(54, 146, 187) 1px 1px;
+  /* border: 1px solid tomato; */
 }
 
 main a:hover {
@@ -157,7 +168,8 @@ main a:hover {
 }
 
 .cta {
-  min-width: 60vw;
+  width: 60vw;
+  max-width: var(--maxWidth);
   margin-top: 3rem;
 }
 
@@ -171,12 +183,19 @@ section {
   background: chartreuse;
 } */
 
+/* ==================== One Portfolio ======================= */
+
 .one .project-list {
   width: 90%;
+  max-width: var(--maxWidth);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
+}
+
+.one h1 {
+  margin-left: 8vw;
 }
 
 .project-list h3 {
@@ -185,7 +204,7 @@ section {
 
 .project-list p {
   width: 100%;
-  min-height: 10rem;
+  min-height: 12rem;
 }
 
 .project-list a {
@@ -193,7 +212,7 @@ section {
   color: white;
   padding: 10px 20px;
   background-color: rgb(117, 121, 121);
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .one .project-list .project {
@@ -224,9 +243,9 @@ section {
   justify-content: space-between;
 }
 
-.tools .tools-techno span {
+.tools .tools-techno .language {
   padding: 5px 10px;
-  background-color: bisque;
+  background-color: #3d3f41;
   border-radius: 15px;
   font-size: 0.8rem;
 }
@@ -238,10 +257,51 @@ section {
 /* ====================== ABOUT ME SECTION ========================== */
 
 .two {
-  max-width: 90%;
+  width: 100%;
   height: 100vh;
   margin: auto;
-  background: darkgoldenrod;
+  /* background: darkgoldenrod; */
+  background-image: url("./img/sky-white1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.about-wrapper {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  max-width: var(--maxWidth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  /* padding-right: 2rem; */
+  /* right: 10vw; */
+  margin: auto;
+}
+.about {
+  /* position: absolute; */
+  top: 10vh;
+  right: 5vw;
+  width: 60%;
+  background: #4b4b4b;
+  padding: 3rem;
+  box-shadow: 3px 3px 10px gray;
+}
+
+.about h1,
+.skills h1 {
+  padding-bottom: 2rem;
+}
+
+.skills {
+  /* position: absolute; */
+  top: 55vh;
+  right: 5vw;
+  background: #4b4b4b;
+  padding: 3rem;
+  box-shadow: 3px 3px 10px gray;
 }
 
 /* ======================= CONTACT ME SECTION ============================== */
@@ -250,18 +310,19 @@ section {
   max-width: 90%;
   /* height: 100vh; */
   margin: auto;
-  background: tomato;
+  /* background: tomato; */
 }
 
-.three h1 {
+/* .three h1 {
   margin: 2rem 0 4rem 0;
-}
+} */
 .contact {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 3rem;
 }
 
 .social {
@@ -269,12 +330,29 @@ section {
   width: 50%;
   justify-content: space-around;
   align-items: center;
+  margin: 5rem;
+  background: #3d3f41;
+  padding: 2rem;
 }
 
 .social .contact-channel {
-  background: rgb(126, 124, 122);
+  /* background: rgb(126, 124, 122); */
   padding: 1rem;
   height: fit-content;
+}
+
+.user,
+.email,
+.linkedin,
+.cv {
+  display: flex;
+  align-items: center;
+  line-height: 2rem;
+}
+
+.social .contact-channel img {
+  width: auto;
+  margin-right: 1rem;
 }
 
 .social img {
@@ -306,6 +384,10 @@ section {
   width: 40%;
   margin: auto;
   /* margin-top: 100px; */
+}
+
+.contact-form h3 {
+  margin: 5rem 0;
 }
 
 input {
@@ -345,6 +427,10 @@ button:hover {
 footer {
   width: 100%;
   height: 15vh;
+  background: #3d3f41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ============================= MOBILE ==================================== */
@@ -360,7 +446,7 @@ footer {
     position: absolute;
     left: 0px;
     height: 50vh;
-    top: 7vh;
+    top: 6vh;
     z-index: 100;
     background-color: #4b4b4b;
     display: flex;
@@ -379,9 +465,10 @@ footer {
     padding: 1rem;
   }
 
-  .cta {
-    min-width: 0;
-  }
+  /* .cta {
+    width: 60vw;
+    min-width: 60vw;
+  } */
 
   .burger {
     display: flex;
@@ -413,17 +500,56 @@ footer {
     margin: 5px;
   }
 
+  /* ================== Two - About ====================== */
+  .two {
+    height: 100%;
+    background-size: cover;
+  }
+  .about-wrapper {
+    position: relative;
+    /* height: fit-content; */
+    margin: auto;
+    padding: 1rem;
+    right: 0;
+  }
+
+  .about-wrapper .about,
+  .about-wrapper .skills {
+    width: 100%;
+    padding: 2rem;
+    /* margin: 1rem; */
+  }
+
+  .about-wrapper .about {
+    margin-bottom: 1rem;
+  }
+
   /* =============== Contact from================= */
+
   .social {
     display: flex;
     flex-direction: column;
+    width: auto;
+    /* margin: 1rem; */
   }
+
+  /* .user,
+  .email,
+  .linkedin,
+  .cv {
+    padding: 1rem;
+  } */
 
   .social img {
     width: 30vw;
+    /* margin: 3rem 0; */
   }
   .contact-form {
-    width: 80%;
+    width: 100%;
+  }
+
+  .contact-form h3 {
+    margin: 2rem 0;
   }
 }
 

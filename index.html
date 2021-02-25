@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Layout</title>
   </head>
   <body>
@@ -103,9 +107,8 @@
                 <span class="language">html</span>
                 <span class="language">css</span>
                 <span class="language">javascript</span>
-                <span class="language">html</span>
-                <span class="language">css</span>
-                <span class="language">javascript</span>
+                <span class="language">php</span>
+                <span class="language">python</span>
               </div>
             </div>
           </div>
@@ -137,33 +140,35 @@
 
       <!-- ===================== ABOUT ======================= -->
       <section id="about" class="two">
-        <div class="about">
-          <h1>About Me</h1>
-          <p>
-            My name is Kiattisak Dujda. I am a developer focused on crafting
-            clean & user-friendly experiences. I am passionate about building
-            excellent applications that improves the lives of those around me. I
-            believe anything can be overcome through commitment and hard work.
-            Always up for learning anything.
-          </p>
-          <p>
-            Currently looking for an opportunity to work as a web developer. I
-            am really enjoy working with JavaScript and learning React as of
-            now, which I find it very chalenging but fun to learn.
-          </p>
-        </div>
-        <div class="skills">
-          <h1>Skills & Development Experiences</h1>
-          <div class="skill">JavaScript</div>
-          <div class="skill">Python</div>
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">NodeJS</div>
-          <div class="skill">Git</div>
-          <div class="skill">MySQL</div>
-          <div class="skill">PostGres</div>
-          <div class="skill">DJango</div>
-          <div class="skill">ReactJs</div>
+        <div class="about-wrapper">
+          <div class="about">
+            <h1>About Me</h1>
+            <p>
+              My name is Kiattisak Dujda. I am a developer focused on crafting
+              clean & user-friendly experiences. I am passionate about building
+              excellent applications that improves the lives of those around me.
+              I believe anything can be overcome through commitment and hard
+              work. Always up for learning anything.
+            </p>
+            <p>
+              Currently looking for an opportunity to work as a web developer. I
+              am really enjoy working with JavaScript and learning React as of
+              now.
+            </p>
+          </div>
+          <div class="skills">
+            <h1>Skills & Development Experiences</h1>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">NodeJS</div>
+            <div class="skill">Git</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">PostGres</div>
+            <div class="skill">DJango</div>
+            <div class="skill">ReactJs</div>
+          </div>
         </div>
       </section>
 
@@ -176,15 +181,29 @@
               <img src="./img/me1.jpg" alt="Kiattisak" />
             </div>
             <div class="contact-channel">
-              <div>Kiattisak Dujda</div>
-              <div>kiattisak.dujda@gmail.com</div>
-              <div>LinkedIn</div>
+              <div class="user">
+                <img src="./img/user-rectangle-solid-24.png" alt="" />
+                <div>Kiattisak Dujda</div>
+              </div>
+              <div class="email">
+                <img src="./img/envelope-solid-24.png" alt="" />
+                <a href="mailto:kiattisak.dujda@gmail.com"
+                  >kiattisak.dujda@gmail.com</a
+                >
+              </div>
+
+              <div class="linkedin">
+                <img src="./img/linkedin-square-logo-24.png" alt="" />
+
+                <!-- <i class="bx bxl-linkedin-square"></i> -->
+                <a href="https://www.linkedin.com/in/kiattisak-dujda/"
+                  >LinkedIn</a
+                >
+              </div>
               <div class="cv">
-                <button>
-                  <a href="assets/frontend-developer.pdf" download
-                    >Download CV</a
-                  >
-                </button>
+                <img src="./img/file-solid-24.png" alt="" />
+
+                <a href="assets/frontend-developer.pdf" download>Download CV</a>
               </div>
             </div>
           </div>
@@ -207,7 +226,7 @@
           </div>
         </div>
       </section>
-      <footer>Designed By Kiattisak Dujda : 2021</footer>
+      <footer>&#169; Kiattisak Dujda, 2021</footer>
     </div>
     <script src="script.js"></script>
   </body>
