@@ -254,7 +254,7 @@ section {
   height: 100%;
   min-height: 100vh;
   margin: auto;
-  background-image: url("./img/sky-white1.jpg");
+  background-image: url("./img/white-sky.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -294,7 +294,7 @@ section {
   box-shadow: 3px 3px 10px gray;
 }
 
-/* ======================= CONTACT ME SECTION ============================== */
+/* ======================= THREE - CONTACT ME SECTION ============================== */
 
 .three {
   max-width: 90%;
@@ -409,6 +409,11 @@ button a {
 
 button:hover {
   background: #9b9a9c;
+}
+
+.message {
+  text-align: center;
+  padding-bottom: 3rem;
 }
 
 /* ===================== Footer ======================== */
