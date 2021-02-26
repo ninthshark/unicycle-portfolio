@@ -83,7 +83,7 @@ const formSubmit = () => {
 
 const start = () => {
   navSlide();
-  formSubmit();
+  // formSubmit();
 };
 
 start();
