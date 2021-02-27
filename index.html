@@ -50,20 +50,23 @@
         <div class="project-list">
           <div class="project">
             <div class="project-image">
-              <img src="./img/img-placeholder.png" alt="" />
+              <a href="https://landingpage-projects.netlify.app/">
+                <img src="./img/video-bicycle.jpg" alt="" />
+              </a>
             </div>
-            <h3>Project name</h3>
+            <h3>Landing Pages</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. A,
-              officia quaerat expedita ad impedit perspiciatis. Sint magni quam
-              corrupti! Quod!
+              A website that hosts multiple landing pages I built using mainly
+              html, css and javascript.
             </p>
             <div class="tools">
               <div class="tools-live">
-                <a href="#" class="live"
+                <a href="https://landingpage-projects.netlify.app/" class="live"
                   ><img src="./img/globe-regular-24.png" alt=""
                 /></a>
-                <a href="#" class="git"
+                <a
+                  href="https://github.com/ninthshark/landing-page-projects"
+                  class="git"
                   ><img src="./img/github-logo-24.png" alt=""
                 /></a>
               </div>
@@ -250,15 +253,16 @@
               data-netlify-recaptcha="true"
             >
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
               <label for="message">Message</label>
               <textarea
                 name="message"
                 id="message"
                 cols="50"
                 rows="10"
+                required
               ></textarea>
               <div data-netlify-recaptcha="true"></div>
               <button type="submit"><div>Send</div></button>

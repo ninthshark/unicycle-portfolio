@@ -70,9 +70,7 @@ const formSubmit = () => {
       email: email.value,
       message: message.value,
     };
-    // info.name = name.value;
-    // info.email = email.value;
-    // info.message = message.value;
+
     const textInfo = `<p class="message">Thank you for your message, ${capitalize(
       info.name
     )}. We will be in touch soon.</p>`;
