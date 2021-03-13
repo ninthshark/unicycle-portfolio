@@ -312,7 +312,7 @@ section {
 
 .social {
   display: flex;
-  width: 50%;
+  /* width: 50%; */
   justify-content: space-around;
   align-items: center;
   margin: 5rem;
