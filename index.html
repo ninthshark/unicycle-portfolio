@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
@@ -61,7 +61,6 @@
               composition of foods provides by the UK government. It is a
               complete application with both the front-end and a simple
               free-to-use REST API as a back-end I developed from the ground up.
-              I plan to add more functionality and convert to React shortly.
             </p>
             <div class="tools">
               <div class="tools-live">
@@ -97,7 +96,7 @@
               expenses. The app calculates your total balance, displays the
               total expenses/incomes, it then shows the percentage of expenses
               to incomes. The existing transactions can be delete or edit. Data
-              persists locally in your web browser local storage.
+              persists in web browser local storage.
             </p>
             <div class="tools">
               <div class="tools-live">
@@ -209,14 +208,16 @@
               <div class="skill">
                 <i class="bx bx-lg bxl-javascript"></i>JavaScript
               </div>
-              <div class="skill"><i class="bx bxl-css3"></i>CSS</div>
               <div class="skill"><i class="bx bxl-python"></i>Python</div>
-              <div class="skill"><i class="bx bxl-git"></i>Git</div>
-              <div class="skill"><i class="bx bxl-react"></i>ReactJs</div>
-              <div class="skill"><i class="bx bxl-html5"></i>HTML</div>
+              <div class="skill">
+                <span><img class="perl_logo" src="./img/camel.png" /></span>Perl
+              </div>
               <div class="skill"><i class="bx bxl-nodejs"></i>NodeJS</div>
-              <div class="skill"><i class="bx bx-data"></i>PostgreSQL</div>
+              <div class="skill"><i class="bx bxl-css3"></i>CSS</div>
+              <div class="skill"><i class="bx bxl-html5"></i>HTML</div>
+              <div class="skill"><i class="bx bx-data"></i>MySQL</div>
               <div class="skill"><i class="bx bx-data"></i>MongoDB</div>
+              <div class="skill"><i class="bx bxl-git"></i>Git</div>
             </div>
           </div>
         </div>
@@ -250,14 +251,14 @@
                   >LinkedIn</a
                 >
               </div>
-              <div class="cv">
+              <!-- <div class="cv">
                 <img src="./img/file-solid-24.png" alt="" />
 
                 <a
                   href="https://drive.google.com/file/d/1sCXKiGjhlD2eok_jcKK0-F-z86kuwkke/view?usp=sharing"
                   >Download CV</a
                 >
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="contact-form">
@@ -287,8 +288,11 @@
           </div>
         </div>
       </section>
-      <footer>&#169; Kiattisak Dujda, 2021</footer>
+      <footer>&#169; Kiattisak Dujda, &nbsp;<span id="year"></span></footer>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+      const date = new Date();
+      const year = date.getFullYear();
+    </script>
   </body>
 </html>

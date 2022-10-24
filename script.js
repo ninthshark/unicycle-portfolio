@@ -1,31 +1,18 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links li");
+const year = document.getElementById("year");
 
-// const contactForm = document.querySelector("#contact-form");
 const contactForm = document.forms[0];
 
-// const contactInfo = document.querySelectorAll(
-//   "#contact-form input, #contact-form textarea"
-// );
+const date = new Date();
+const fullYear = date.getFullYear();
+
+year.innerHTML = fullYear;
 
 const navSlide = () => {
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
-
-    //Animate Links
-
-    // navLinks.forEach((link, index) => {
-    //   if (link.style.animation) {
-    //     link.style.animation = "";
-    //   } else {
-    //     link.style.animation = `navLinkFade 0.3s ease forwards ${
-    //       index / 7 + 0.3
-    //     }s`;
-    //   }
-    // });
-
-    // Burger animation
     burger.classList.toggle("toggle");
   });
 
@@ -59,10 +46,6 @@ const formSubmit = () => {
 
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    // console.log(event.target.elements);
-    // const contactInfo = document.querySelectorAll(
-    //   "#contact-form input, #contact-form textarea"
-    // );
 
     const { name, email, message } = event.target.elements;
     const info = {

@@ -409,6 +409,12 @@ button:hover {
   padding-bottom: 3rem;
 }
 
+.perl_logo {
+  width: 1.5rem;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
 /* ===================== Footer ======================== */
 footer {
   width: 100%;
